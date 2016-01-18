@@ -69,7 +69,7 @@ footer
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    height:50px;
+    height: 95px;
     width: 150px;
 }
 #imgloading
