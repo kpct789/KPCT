@@ -7,8 +7,8 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=true, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" /><!-- target-densitydpi=device-dpi -->
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <!--<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">-->
-        <title>Hello World</title>        
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <title>Hello World</title>
     </head>
     <body>
         <div id="divloading" class="divWaiting" style="display: none">
@@ -17,27 +17,27 @@
                 <label class="text text-success">Report is Loading</label>
             </span>
         </div>
-        <div id="containerId" class="app">
-            <!--<h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device Connected</p>
-            </div>-->
+        <div id="containerId" class="container"><br>
+            <img src="img/logo.png"><br><br><br><br>
+            <center>
+            <div class="row">
+                <div class="col-md-12"><a href="ContainerSearch.html"><img src="img/ContainerSearchButton.PNG" class="img-thumbnail" height="50" width="300"></a></div>
+            </div><br><br>
+            <div class="row">
+                <div class="col-md-12"><a href="VesselSchedule.html"><img src="img/VesselScheduleButton.PNG" class="img-thumbnail" height="50" width="300"></a></div>
+            </div>
+            </center>
         </div>
-        <!--<script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>-->
         <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
         <script type="text/javascript">
-            //app.initialize();
             $(document).ready(function(){
-                var rurl='http://61.0.225.169:81/ContainerSearch';
+                var rurl='http://172.168.8.151:81/ContainerSearch';
+                //var rurl='http://61.0.225.169:81/ContainerSearch';
                 //var rurl = 'http://www.krishnapatnamport.com/ContainerSearch/m.index.php';
                 var redirect = function(){
-                    //$("#divloading").css('display', 'block');
                     $(location).attr('href',rurl);
                 };
-                setTimeout(redirect, 5000);
-                //$("#divloading").css('display', 'none');
+                //setTimeout(redirect, 5000);
             });
         </script>
     </body>

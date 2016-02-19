@@ -7,15 +7,23 @@ html
     position: relative;
     min-height: 100%;
 }
-body
+body1
 {
-    background: #E4E4E4; /* Old browsers */
-    background: -moz-linear-gradient(top,  #A7A7A7 0%, #E4E4E4 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #A7A7A7 0%,#E4E4E4 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #A7A7A7 0%,#E4E4E4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A7A7A7', endColorstr='#E4E4E4',GradientType=0 ); /* IE6-9 */
+    background: White;
     background-attachment: fixed;
     min-height: 100%;
+    margin: 0px;
+}
+body
+{
+    background: #D4EBF9; /* Old browsers */
+    background: -moz-linear-gradient(top,  #D4EBF9 0%, #E6F1F7 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #D4EBF9 0%,#E6F1F7 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #D4EBF9 0%,#E6F1F7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D4EBF9', endColorstr='#E6F1F7',GradientType=0 ); /* IE6-9 */
+    background-attachment: fixed;
+    min-height: 100%;
+    margin: 0px;
 }
 footer 
 {
@@ -65,7 +73,7 @@ footer
 .app {
     background: url(../img/logo.png) no-repeat center top;
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
