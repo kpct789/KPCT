@@ -30,10 +30,11 @@
         </div>
         <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
         <script type="text/javascript">
+            window.history.forward(-1);
             $(document).ready(function(){
-                var rurl='http://172.168.8.151:81/ContainerSearch';
+                //var rurl='http://172.168.8.151:81/ContainerSearch';
                 //var rurl='http://61.0.225.169:81/ContainerSearch';
-                //var rurl = 'http://www.krishnapatnamport.com/ContainerSearch/m.index.php';
+                var rurl = 'http://www.krishnapatnamport.com/ContainerSearch/m.index.php';
                 var redirect = function(){
                     $(location).attr('href',rurl);
                 };
