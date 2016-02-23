@@ -16,9 +16,17 @@
         body{
             padding-top: 65px;
         }
+        .navbar-center
+        {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            margin: auto;
+        }
     </style>
 </head>
-<body>
+<body style="background-color: #D4EBF9;">
     <!--<iframe id="response" style="width: 500px; height: 500px;" src="http://61.0.225.169:81/ContainerSearch"></iframe>-->
     <!--<div class="container">
         <table class="table" style="width: 100%; height: 100%; position: absolute; margin: 0; top: 0px; left: 0px; background-color: #D4EBF9;">
@@ -69,6 +77,9 @@
     </nav>
     <div class="container" style="height: 90%; position: absolute; width: 100%;">
         <iframe id="response" style="width: 100%; height: 100%; position: relative; margin: 0; top: 0px; left: 0px;" frameborder="0" src="http://www.krishnapatnamport.com/ContainerSearch/m.index.php"></iframe>
+    </div>
+    <div class="navbar-inverse navbar-fixed-bottom" style="height: 30px; padding-top: 5px;">
+        <a class="navbar-center" href="#" onclick="exitFromApp()"><img src="img/Close24x24.PNG" height="20" width="20"></a>
     </div>
 </body>
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
