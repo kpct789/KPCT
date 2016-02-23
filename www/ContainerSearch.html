@@ -2,33 +2,36 @@
 <html>
 <head>
     <title>Container Search</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 </head>
 <body>
     <!--<iframe id="response" style="width: 500px; height: 500px;" src="http://61.0.225.169:81/ContainerSearch"></iframe>-->
-    <table class="table table-responsive" style="width: 100%; height: 100%; position: absolute; margin: 0; top: 0px; left: 0px; background-color: #D4EBF9;">
-        <tr>
-            <td style="height: 10%; border-bottom: 1px solid Gray; padding-left: 25px;">
-                <!--<a href="index.html"><img alt="Home" oncontextmenu="return false;" src="img/Home64x64.PNG" height="35" width="40" class="img-thumbnail img-circle" title="Home"></a>
-                <a href="VesselSchedule.html"><img alt="Vessel Schedule" oncontextmenu="return false;" src="img/Vessel64x64.jpg" height="35" width="40" class="img-thumbnail img-circle" title="Vessel Schedule"></a>-->
-                <table style="width: 100%; height: 100%; background-color: #D4EBF9;">
-                    <tr>
-                        <td style="width: 50%; border-right: 1px solid Gray; padding-left: 25px; text-align: center;">
-                            <a href="index.html"><img alt="Home" oncontextmenu="return false;" src="img/HomeButton.PNG" height="40" width="120" title="Home"></a>
-                        </td>
-                        <td style="width: 50%; padding-left: 25px; text-align: center;">
-                            <a href="VesselSchedule.html"><img src="img/VesselScheduleButton.PNG" height="40" width="200"></a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td style="height: 90%">
-                <iframe id="response" style="width: 100%; height: 100%; position: relative; margin: 0; top: 0px; left: 0px;" frameborder="0" src="http://www.krishnapatnamport.com/ContainerSearch/m.index.php"></iframe>
-            </td>
-        </tr>
-    </table>
+    <div class="container">
+        <table class="table table-responsive" style="width: 100%; height: 100%; position: absolute; margin: 0; top: 0px; left: 0px; background-color: #D4EBF9;">
+            <tr>
+                <td style="height: 10%; border-bottom: 1px solid Gray; padding-left: 25px;">
+                    <!--<a href="index.html"><img alt="Home" oncontextmenu="return false;" src="img/Home64x64.PNG" height="35" width="40" class="img-thumbnail img-circle" title="Home"></a>
+                    <a href="VesselSchedule.html"><img alt="Vessel Schedule" oncontextmenu="return false;" src="img/Vessel64x64.jpg" height="35" width="40" class="img-thumbnail img-circle" title="Vessel Schedule"></a>-->
+                    <table style="width: 100%; height: 100%; background-color: #D4EBF9;">
+                        <tr>
+                            <td style="width: 50%; border-right: 1px solid Gray; padding-left: 25px; text-align: center;">
+                                <a href="index.html"><img alt="Home" oncontextmenu="return false;" src="img/HomeButton.PNG" height="40" width="120" title="Home"></a>
+                            </td>
+                            <td style="width: 50%; padding-left: 25px; text-align: center;">
+                                <a href="VesselSchedule.html"><img src="img/VesselScheduleButton.PNG" height="40" width="200"></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 90%">
+                    <iframe id="response" style="width: 100%; height: 100%; position: relative; margin: 0; top: 0px; left: 0px;" frameborder="0" src="http://www.krishnapatnamport.com/ContainerSearch/m.index.php"></iframe>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
     <script type="text/javascript">
