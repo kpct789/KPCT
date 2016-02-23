@@ -26,7 +26,7 @@ body1
     margin: 0px;
 }
 
-@media only screen and (min-device-width : 200px) and (max-device-width : 320px)
+@media only screen and (min-device-width : 200px) and (min-device-height : 320px)
 {
     body
     {
@@ -34,7 +34,7 @@ body1
     }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+@media only screen and (min-device-width : 320px) and (min-device-height : 480px)
 {
     body
     {
@@ -42,7 +42,7 @@ body1
     }
 }
 
-@media only screen and (min-device-width : 480px) and (max-device-width : 800px)
+@media only screen and (min-device-width : 480px) and (min-device-height : 800px)
 {
     body
     {
@@ -50,7 +50,7 @@ body1
     }
 }
 
-@media only screen and (min-device-width : 720px) and (max-device-width : 1280px)
+@media only screen and (min-device-width : 720px) and (min-device-height : 1280px)
 {
     body
     {
@@ -58,7 +58,7 @@ body1
     }
 }
 
-@media only screen and (min-device-width : 1080px) and (max-device-width : 1920px)
+@media only screen and (min-device-width : 1080px) and (min-device-height : 1920px)
 {
     body
     {
@@ -66,7 +66,7 @@ body1
     }
 }
 
-@media only screen and (min-device-width : 1920px) and (max-device-width : 1080px)
+@media only screen and (min-device-width : 1920px) and (min-device-height : 1080px)
 {
     body
     {
@@ -74,7 +74,7 @@ body1
     }
 }
 
-@media only screen and (min-device-width : 360px) and (max-device-height : 640px)
+@media only screen and (min-device-width : 360px) and (min-device-height : 640px)
 {
     body
     {
@@ -82,7 +82,7 @@ body1
     }
 }
 
-@media only screen and (min-device-width : 640px) and (max-device-height : 360px)
+@media only screen and (min-device-width : 640px) and (min-device-height : 360px)
 {
     body
     {
