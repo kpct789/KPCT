@@ -80,6 +80,24 @@ body1
     }
 }
 
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px)
+{
+    body
+    {
+        background: url('../res/screen/android/360x640.PNG') no-repeat center top;
+        background-size: 100%;
+    }
+}
+
+@media only screen and (min-device-width : 640px) and (max-device-width : 360px)
+{
+    body
+    {
+        background: url('../res/screen/android/640x360.PNG') no-repeat center top;
+        background-size: 100%;
+    }
+}
+
 footer 
 {
     position: absolute;
