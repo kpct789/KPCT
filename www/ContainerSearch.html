@@ -2,24 +2,31 @@
 <html>
 <head>
     <title>Container Search</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <style type="text/css">
         .fill
         {
             min-height: 100%;
         }
+        body{
+            padding-top: 60px;
+        }
     </style>
 </head>
 <body>
     <!--<iframe id="response" style="width: 500px; height: 500px;" src="http://61.0.225.169:81/ContainerSearch"></iframe>-->
-    <div class="container">
+    <!--<div class="container">
         <table class="table" style="width: 100%; height: 100%; position: absolute; margin: 0; top: 0px; left: 0px; background-color: #D4EBF9;">
             <tr>
                 <td style="height: 10%; border-bottom: 1px solid Gray; padding-left: 25px;">
                     <!--<a href="index.html"><img alt="Home" oncontextmenu="return false;" src="img/Home64x64.PNG" height="35" width="40" class="img-thumbnail img-circle" title="Home"></a>
                     <a href="VesselSchedule.html"><img alt="Vessel Schedule" oncontextmenu="return false;" src="img/Vessel64x64.jpg" height="35" width="40" class="img-thumbnail img-circle" title="Vessel Schedule"></a>-->
-                    <table style="width: 100%; height: 100%; background-color: #D4EBF9;">
+                    <!--<table style="width: 100%; height: 100%; background-color: #D4EBF9;">
                         <tr>
                             <td style="width: 50%; border-right: 1px solid Gray; padding-left: 25px; text-align: center;">
                                 <a href="index.html"><img alt="Home" oncontextmenu="return false;" src="img/HomeButton.PNG" height="40" width="120" title="Home"></a>
@@ -37,6 +44,30 @@
                 </td>
             </tr>
         </table>
+    </div>-->
+    <nav role="navigation" class="navbar navbar-primary navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand"><img src="img/logo.png" height="25"></span>
+            </div>
+            <!-- Collection of nav links and other content for toggling -->
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#"><img alt="Home" oncontextmenu="return false;" src="img/HomeButton.PNG" height="25" width="120" title="Home"></a></li>
+                    <li><a href="VesselSchedule.html"><img src="img/VesselScheduleButton.PNG" height="25" width="200"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="height: 90%; position: absolute; width: 100%;">
+        <iframe id="response" style="width: 100%; height: 100%; position: relative; margin: 0; top: 0px; left: 0px;" frameborder="0" src="http://www.krishnapatnamport.com/ContainerSearch/m.index.php"></iframe>
     </div>
 </body>
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
