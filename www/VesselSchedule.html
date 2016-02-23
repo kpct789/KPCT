@@ -3,7 +3,11 @@
 <head>
     <title>Vessel Schedule</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" /> 
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+    <meta name="HandheldFriendly" content="true" /> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -77,8 +81,9 @@
     </div>
     <script>loaded();</script>
 </body>
-    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="application/javascript" src="js/jquery-1.10.2.js"></script>
     <script type="application/javascript" src="js/iscroll.js"></script>
+    <script type="application/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         var myScroll;
         function loaded() {
@@ -88,5 +93,24 @@
 
         document.addEventListener('DOMContentLoaded', loaded, false);
         window.history.forward(-1);
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {
+            document.addEventListener("backbutton", onBackKeyDown, false); //Listen to the User clicking on the back button
+        }
+
+        function onBackKeyDown(e) {
+            e.preventDefault();
+            navigator.notification.confirm("Are you sure you want to exit ?", onConfirm, "Confirmation", "Yes,No"); 
+            // Prompt the user with the choice
+        }
+
+        function onConfirm(button) {
+            if(button==2){//If User selected No, then we just do nothing
+                return;
+            }else{
+                navigator.app.exitApp();// Otherwise we quit the app.
+            }
+        }
     </script>
 </html>
