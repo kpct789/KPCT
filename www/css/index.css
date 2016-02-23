@@ -62,6 +62,24 @@ body1
     }
 }
 
+@media only screen and (min-device-width : 1080px) and (max-device-width : 1920px)
+{
+    body
+    {
+        background: url('../res/screen/android/1080x1920.PNG') no-repeat center top;
+        background-size: 100%;
+    }
+}
+
+@media only screen and (min-device-width : 1920px) and (max-device-width : 1080px)
+{
+    body
+    {
+        background: url('../res/screen/android/1920x1080.PNG') no-repeat center top;
+        background-size: 100%;
+    }
+}
+
 footer 
 {
     position: absolute;
