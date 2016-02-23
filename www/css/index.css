@@ -31,7 +31,6 @@ body1
     body
     {
         background: url('../res/screen/android/200x320.PNG') no-repeat center top;
-        background-size: 100%;
     }
 }
 
@@ -40,7 +39,6 @@ body1
     body
     {
         background: url('../res/screen/android/320x480.PNG') no-repeat center top;
-        background-size: 100%;
     }
 }
 
@@ -49,7 +47,6 @@ body1
     body
     {
         background: url('../res/screen/android/480x800.PNG') no-repeat center top;
-        background-size: 100%;
     }
 }
 
@@ -58,7 +55,6 @@ body1
     body
     {
         background: url('../res/screen/android/720x1280.PNG') no-repeat center top;
-        background-size: 100%;
     }
 }
 
@@ -67,7 +63,6 @@ body1
     body
     {
         background: url('../res/screen/android/1080x1920.PNG') no-repeat center top;
-        background-size: 100%;
     }
 }
 
@@ -76,25 +71,22 @@ body1
     body
     {
         background: url('../res/screen/android/1920x1080.PNG') no-repeat center top;
-        background-size: 100%;
     }
 }
 
-@media only screen and (min-device-width : 360px) and (max-device-width : 640px)
+@media only screen and (min-device-width : 360px) and (max-device-height : 640px)
 {
     body
     {
         background: url('../res/screen/android/360x640.PNG') no-repeat center top;
-        background-size: 100%;
     }
 }
 
-@media only screen and (min-device-width : 640px) and (max-device-width : 360px)
+@media only screen and (min-device-width : 640px) and (max-device-height : 360px)
 {
     body
     {
         background: url('../res/screen/android/640x360.PNG') no-repeat center top;
-        background-size: 100%;
     }
 }
 
