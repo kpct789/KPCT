@@ -14,7 +14,7 @@ body1
     min-height: 100%;
     margin: 0px;
 }
-body
+body1
 {
     background: #D4EBF9; /* Old browsers */
     background: -moz-linear-gradient(top,  #D4EBF9 0%, #E6F1F7 100%); /* FF3.6-15 */
@@ -25,6 +25,43 @@ body
     min-height: 100%;
     margin: 0px;
 }
+
+@media only screen and (min-device-width : 200px) and (max-device-width : 320px)
+{
+    body
+    {
+        background: url('../res/screen/android/200x320.PNG') no-repeat center top;
+        background-size: 100%;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+{
+    body
+    {
+        background: url('../res/screen/android/320x480.PNG') no-repeat center top;
+        background-size: 100%;
+    }
+}
+
+@media only screen and (min-device-width : 480px) and (max-device-width : 800px)
+{
+    body
+    {
+        background: url('../res/screen/android/480x800.PNG') no-repeat center top;
+        background-size: 100%;
+    }
+}
+
+@media only screen and (min-device-width : 720px) and (max-device-width : 1280px)
+{
+    body
+    {
+        background: url('../res/screen/android/720x1280.PNG') no-repeat center top;
+        background-size: 100%;
+    }
+}
+
 footer 
 {
     position: absolute;
@@ -70,15 +107,28 @@ footer
     /*padding-top: 30%;*/
     display: flex;
 }
-.app {
-    background: url(../img/logo.png) no-repeat center top;
+.app 
+{
+    /*background: url(../img/logo.png) no-repeat center top;*/
     position: absolute;
-    top: 10%;
+    top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    height: 95px;
-    width: 150px;
+    /*height: 95px;
+    width: 150px;*/
+}
+.app a{
+    border: 1px solid #5FCCB2;
+    padding: 20px;
+}
+.logo
+{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 #imgloading
 {
