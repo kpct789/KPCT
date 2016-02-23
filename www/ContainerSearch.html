@@ -63,7 +63,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <span class="navbar-brand"><img src="img/logo.png" height="25"></span>
+                <a href="index.html" class="navbar-brand"><img src="img/logo.png" height="25"></a>
             </div>
             <!-- Collection of nav links and other content for toggling -->
             <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -75,15 +75,20 @@
             </div>
         </div>
     </nav>
-    <div class="container" style="height: 90%; position: absolute; width: 100%;">
+    <div class="container" style="height: 85%; position: absolute; width: 100%;">
         <iframe id="response" style="width: 100%; height: 100%; position: relative; margin: 0; top: 0px; left: 0px;" frameborder="0" src="http://www.krishnapatnamport.com/ContainerSearch/m.index.php"></iframe>
     </div>
-    <div class="navbar-inverse navbar-fixed-bottom" style="height: 30px; padding-top: 5px;">
+    <div class="navbar-inverse navbar-fixed-bottom" style="height: 20px; padding-top: 5px;">
         <a class="navbar-center" href="#" onclick="exitFromApp()"><img src="img/Close24x24.PNG" height="20" width="20"></a>
     </div>
 </body>
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="application/javascript" src="cordova.js"></script>
     <script type="text/javascript">
         window.history.forward(-1);
+        function exitFromApp()
+        {
+            navigator.app.exitApp();
+        }
     </script>
 </html>
