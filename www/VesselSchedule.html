@@ -20,6 +20,14 @@
         body{
             padding-top: 60px;
         }
+        .navbar-center
+        {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -69,18 +77,18 @@
                     <li><a href="ContainerSearch.html"><img src="img/ContainerSearchButton.PNG" height="25" width="200"></a></li>
                     <li class="active"><a href="VesselSchedule.html"><img src="img/VesselScheduleButton.PNG" height="25" width="200"></a></li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" onclick="exitFromApp()">Close</a></li>
-                </ul>
             </div>
         </div>
     </nav>
     <div class="container" style="height: 90%; position: absolute; width: 100%;">
         <div id="wrapper" style="width:100%">
-            <div style="background-color: white; width: 99%; position: absolute; height: 98%; overflow: auto;">
+            <!--<div style="background-color: white; width: 99%; position: absolute; height: 98%; overflow: auto;">-->
                 <img alt="Vessel Schedule" src="img/Vessel-Schedule.png" width="90%">
-            </div>
+            <!--</div>-->
         </div>
+    </div>
+    <div class="navbar-inverse navbar-fixed-bottom" style="height: 30px; padding-top: 5px;">
+        <a class="navbar-center" href="#" onclick="exitFromApp()"><img src="img/CloseButton.PNG" height="20" width="80"></a>
     </div>
     <script>loaded();</script>
 </body>
