@@ -3,7 +3,7 @@
 <head>
     <title>Vessel Schedule</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -69,13 +69,24 @@
         </div>
     </nav>
     <div class="container" style="height: 90%; position: absolute; width: 100%;">
-        <div style="background-color: white; width: 99%; position: absolute; height: 98%; overflow: auto;">
-            <img alt="Vessel Schedule" src="img/Vessel-Schedule.png" width="80%">
+        <div id="wrapper" style="width:100%">
+            <div style="background-color: white; width: 99%; position: absolute; height: 98%; overflow: auto;">
+                <img alt="Vessel Schedule" src="img/Vessel-Schedule.png" width="90%">
+            </div>
         </div>
     </div>
+    <script>loaded();</script>
 </body>
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="application/javascript" src="js/iscroll.js"></script>
     <script type="text/javascript">
+        var myScroll;
+        function loaded() {
+            myScroll = new iScroll('wrapper',
+                { zoom:true, zoomMax: 4 });
+        }
+
+        document.addEventListener('DOMContentLoaded', loaded, false);
         window.history.forward(-1);
     </script>
 </html>
