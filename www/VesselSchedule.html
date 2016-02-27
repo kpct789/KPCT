@@ -1,27 +1,28 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
+
 <head>
     <title>Vessel Schedule</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" /> 
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
-    <meta name="apple-mobile-web-app-capable" content="yes" /> 
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
-    <meta name="HandheldFriendly" content="true" /> 
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="HandheldFriendly" content="true" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <style type="text/css">
-        .fill
-        {
+        .fill {
             min-height: 100%;
         }
-        body{
+        
+        body {
             padding-top: 60px;
         }
-        .navbar-center
-        {
+        
+        .navbar-center {
             position: absolute;
             width: 100%;
             left: 0;
@@ -31,6 +32,7 @@
         /*div#wrapper img { -webkit-transform:translate3d(0,0,0) }*/
     </style>
 </head>
+
 <body>
     <!--<iframe id="response" style="width: 500px; height: 500px;" src="http://61.0.225.169:81/ContainerSearch"></iframe>-->
     <!--<table class="table table-responsive" style="width: 100%; height: 100%; position: absolute; margin: 0; top: 0px; left: 0px; background-color: #D4EBF9;">
@@ -38,7 +40,7 @@
             <td style="height: 10%; border-bottom: 1px solid Gray; padding-left: 25px;">
                 <!--<a href="index.html"><img alt="Home" oncontextmenu="return false;" src="img/Home64x64.PNG" height="35" width="40" class="img-thumbnail img-circle" title="Home"></a>
                 <a href="VesselSchedule.html"><img alt="Vessel Schedule" oncontextmenu="return false;" src="img/Vessel64x64.jpg" height="35" width="40" class="img-thumbnail img-circle" title="Vessel Schedule"></a>-->
-                <!--<table style="width: 100%; height: 100%; background-color: #D4EBF9;">
+    <!--<table style="width: 100%; height: 100%; background-color: #D4EBF9;">
                     <tr>
                         <td style="width: 50%; border-right: 1px solid Gray; padding-left: 25px; text-align: center;">
                             <a href="index.html"><img alt="Home" oncontextmenu="return false;" src="img/HomeButton.PNG" height="40" width="120" title="Home"></a>
@@ -53,7 +55,7 @@
         <tr>
             <td style="height: 90%; text-align: center;">
                 <!--<iframe id="response" style="width: 100%; height: 100%; position: relative; margin: 0; top: 0px; left: 0px;" frameborder="0" src="http://www.kpcl.com/vessel-schdule-kpct.html"></iframe>-->
-                <!--<div style="background-color: white; width: 99%; position: absolute; height: 88%; overflow: auto;">
+    <!--<div style="background-color: white; width: 99%; position: absolute; height: 88%; overflow: auto;">
                     <img alt="Vessel Schedule" src="img/Vessel-Schedule.png" width="1024" height="1200">
                 </div>
             </td>
@@ -74,28 +76,36 @@
             <!-- Collection of nav links and other content for toggling -->
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html"><img alt="Home" oncontextmenu="return false;" src="img/HomeButton.PNG" height="25" width="100" title="Home"></a></li>
-                    <li><a href="ContainerSearch.html"><img src="img/ContainerSearchButton_1.PNG" height="25" width="200"></a></li>
-                    <li class="active"><a href="VesselSchedule.html"><img src="img/VesselScheduleButton_1.PNG" height="25" width="200"></a></li>
+                    <li>
+                        <a href="index.html"><img alt="Home" oncontextmenu="return false;" src="img/HomeButton.PNG" height="25" width="100" title="Home"></a>
+                    </li>
+                    <li>
+                        <a href="ContainerSearch.html"><img src="img/ContainerSearchButton_1.PNG" height="25" width="200"></a>
+                    </li>
+                    <li class="active">
+                        <a href="VesselSchedule.html"><img src="img/VesselScheduleButton_1.PNG" height="25" width="200"></a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-        <div id="wrapper" style="width:100%">
-            <div style="background-color: white; width: 99%; position: absolute; height: 98%;">
-                <img alt="Vessel Schedule" src="img/Vessel-Schedule.png" width="99%">
-            </div>
+    <div id="wrapper" style="width:100%">
+        <div style="background-color: white; width: 99%; position: absolute; height: 98%;">
+            <img alt="Vessel Schedule" src="img/Vessel-Schedule.png" width="99%">
         </div>
+    </div>
     <div class="navbar-inverse navbar-fixed-bottom" style="height: 30px; padding-top: 5px;">
         <a class="navbar-center" href="#" onclick="exitFromApp()"><img src="img/Close24x24.PNG" height="20" width="20"></a>
     </div>
-    <script>loaded();</script>
+    <script>
+        loaded();
+    </script>
 </body>
-    <script type="application/javascript" src="js/jquery-1.10.2.js"></script>
-    <script type="application/javascript" src="js/iscroll.js"></script>
-    <script type="application/javascript" src="cordova.js"></script>
-    <script type="text/javascript">
-        var myScroll;
+<script type="application/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="application/javascript" src="js/iscroll.js"></script>
+<script type="application/javascript" src="cordova.js"></script>
+<script type="text/javascript">
+    var myScroll;
         function loaded() {
             myScroll = new iScroll('wrapper',
                 { zoom:true, zoomMax: 4 });
@@ -107,5 +117,6 @@
         {
             navigator.app.exitApp();
         }
-    </script>
+</script>
+
 </html>
