@@ -37,7 +37,7 @@ body2
     min-height: 100%;
     margin: 0px;
 }
-.logo
+.logo1
 {
     background: url('../img/logo.png') no-repeat center top;
     height: 10%;
@@ -56,7 +56,7 @@ body2
     position: absolute;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    height: 12%;
+    height: 15%;
     /*width: 250px;*/
     /*min-width: 25%;*/
 }
@@ -205,14 +205,15 @@ footer
     border: 1px solid #5FCCB2;
     padding: 20px;
 }
-/*.logo
+.logo
 {
     position: absolute;
-    top: 20%;
+    top: 8%;
     left: 50%;
+    height: 10%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-}*/
+}
 #imgloading
 {
     position: absolute;
