@@ -8,7 +8,7 @@ html
     min-height: 100%;
 }
 body { 
-  background: url(../res/screen/android/1920x1080.PNG) no-repeat center top;
+  /*background: url(../res/screen/android/1920x1080.PNG) no-repeat center top;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
