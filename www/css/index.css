@@ -44,7 +44,7 @@ body2
     /*width: 10%;*/
     top: 8%;
     left: 50%;
-    position: fixed;
+    position: absolute;
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
