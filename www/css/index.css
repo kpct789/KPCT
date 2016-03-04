@@ -205,14 +205,14 @@ footer
     border: 1px solid #5FCCB2;
     padding: 20px;
 }
-.logo
+/*.logo
 {
     position: absolute;
     top: 20%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-}
+}*/
 #imgloading
 {
     position: absolute;
