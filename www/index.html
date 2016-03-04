@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <title>KPCT</title>
 </head>
-
 <body>
     <!--<div id="divloading" class="divWaiting" style="display: none">
             <span id="imgloading">
@@ -70,6 +69,36 @@
                 
                 $("#txtScreenCoords").val(docWidth+'x'+docHeight);
             });*/
+            
+            /** * Upload current picture */
+            function uploadPicture() {
+                // Get URI of picture to upload
+                var img = document.getElementById('camera_image');
+                var imageURI = img.src;
+                if (!imageURI || (img.style.display == "none"))
+                {
+                    document.getElementById('camera_status').innerHTML = "Take picture or select picture from library first.";        
+                    return;
+                }
+                // Verify server has been entered    
+                server = document.getElementById('serverUrl').value;
+                if (server) {
+                    // Specify transfer options        
+                    var options = new FileUploadOptions();
+                    options.fileKey="file";
+                    options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
+                    options.mimeType="image/jpeg";
+                    options.chunkedMode = false;
+                    // Transfer picture to server
+                    var ft = new FileTransfer();
+                    ft.upload(imageURI, server, function(r) {
+                            document.getElementById('camera_status').innerHTML = "Upload successful: "+ r.bytesSent+" bytes uploaded.";
+                        },
+                        function(error) {
+                            document.getElementById('camera_status').innerHTML = "Upload failed: Code = "+ error.code;
+                        }, options);
+                }
+            }
     </script>
 </body>
 
