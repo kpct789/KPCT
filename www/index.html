@@ -3,61 +3,60 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>KPCT</title>
-    <link href="http://www.tutorialspoint.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .btn-sq-lg {
-            width: 150px !important;
-            height: 150px !important;
-        }
-        
-        .btn-sq {
-            width: 100px !important;
-            height: 100px !important;
-            font-size: 10px;
-        }
-        
-        .btn-sq-sm {
-            width: 50px !important;
-            height: 50px !important;
-            font-size: 10px;
-        }
-        
-        .btn-sq-xs {
-            width: 25px !important;
-            height: 25px !important;
-            padding: 2px;
+    <title>KPCT</title>    
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        html{
+            margin-top: 7%;
         }
     </style>
 </head>
 <body>
-    <br>
-    <br>
-    <img class="logo" src="img/logo.png">
-    <br>
-    <br>
-    <br>
-    <div class="containersearchbutton">
-        <a class="btn btn-responsive" href="ContainerSearch.html"><img src="img/ContainerSearchButton.PNG" class="button1"></a>
+    <div class="container">
+        <button class="btn btn-sm btn-danger" onclick="exitFromApp();" style="float: right;"><span class="glyphicon glyphicon-remove"></span></button>
         <br>
-        <a class="btn btn-responsive" href="VesselSchedule.html"><img src="img/VesselScheduleButton.PNG" class="button2"></a>
+        <img class="logo" src="img/logo.png">
+        <br>
+        <br>
+        <br>
+        <br>
+        <!--<div>
+            <a href="ContainerSearch.html"><img src="img/ContainerSearchButton.PNG" class="img-responsive" width="230px"></a>
+            <br>
+            <a href="VesselSchedule.html"><img src="img/VesselScheduleButton.PNG" class="img-responsive" width="230px"></a>
+        </div>-->
+        <br>
+        <a class="btn btn-success btn-lg btn-block" href="ContainerSearch.html">
+            <img src="img/Container256x180.png" height="32" width="32" class="img-thumbnail img-rounded">
+            <span>Container Search</span>
+        </a>
+        <br>
+        <a class="btn btn-success btn-lg btn-block" href="VesselSchedule.html">
+            <img src="img/Vessel128x128.PNG" height="32" width="32" class="img-thumbnail img-circle">
+            <span>Vessel Schedule</span>
+        </a>
     </div>
+    <script type="application/javascript" src="cordova.js"></script>
     <script type="text/javascript">
         window.history.forward(-1);
-            $(document).ready(function(){
-                //var rurl='http://172.168.8.151:81/ContainerSearch';
-                //var rurl='http://61.0.225.169:81/ContainerSearch';
-                //var rurl = 'http://www.krishnapatnamport.com/ContainerSearch/m.index.php';
-                //var redirect = function(){
-                //    $(location).attr('href',rurl);
-                //};
-                //var docWidth=document.documentElement.clientWidth;
-                //var docHeight=document.documentElement.clientHeight;
-                
-                //$("#txtScreenCoords").val(docWidth+'x'+docHeight);
-                //setTimeout(redirect, 5000);
-            });
+        $(document).ready(function(){
+            //var rurl='http://172.168.8.151:81/ContainerSearch';
+            //var rurl='http://61.0.225.169:81/ContainerSearch';
+            //var rurl = 'http://www.krishnapatnamport.com/ContainerSearch/m.index.php';
+            //var redirect = function(){
+            //    $(location).attr('href',rurl);
+            //};
+            //var docWidth=document.documentElement.clientWidth;
+            //var docHeight=document.documentElement.clientHeight;
+
+            //$("#txtScreenCoords").val(docWidth+'x'+docHeight);
+            //setTimeout(redirect, 5000);
+        });
+        function exitFromApp()
+        {
+            navigator.app.exitApp();
+        }
     </script>
 </body>
 </html>
