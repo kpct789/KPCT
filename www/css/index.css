@@ -7,12 +7,12 @@ html
     position: relative;
     min-height: 100%;
 }
-body { 
+body3 { 
   background: url(../res/screen/android/1920x1080.PNG) no-repeat center center fixed;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 input
 {
@@ -51,13 +51,29 @@ body2
 
 .containersearchbutton
 {
-    background-color: antiquewhite;
+    /*background-color: antiquewhite;*/
     top: 50%;
     left: 50%;
+    width: 35%;
     position: absolute;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    width: 150px;
+}
+
+.button1{
+    position: relative;
+    float: left;
+    width:100%;
+    margin:0;
+    z-index:1000;
+}
+
+.button2{
+    position: relative;
+    float: left;
+    width:100%;
+    margin:0;
+    z-index:1000;
 }
 
 /*
