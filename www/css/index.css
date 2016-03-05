@@ -7,12 +7,12 @@ html
     position: relative;
     min-height: 100%;
 }
-body3 { 
-  /*background: url(../res/screen/android/1920x1080.PNG) no-repeat center top;*/
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+body { 
+  background: url(../res/screen/android/1920x1080.PNG) no-repeat center center fixed;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
 }
 input
 {
