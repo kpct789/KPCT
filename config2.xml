@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.kpcl.kpctcontainersearch" version="2.0.3">
+ 
+<name>KPCT</name>
+  <description>Krishnapatnam Port Container Terminal - Container Search Application</description>
+  <author href="http://www.krishnapatnamport.com" email="support@krishnapatnamport.com">KPCL IT Team</author>
+  <content src="index.html"/>
+<preference name="phonegap-version" value="{phoneGapVersion}" />
+<gap:config-file platform="iOS" parent="CFBundleVersion">
+  <string>2.0</string>
+</gap:config-file>
+
+<preference name="SplashScreenDelay" value="2000" />
+<gap:splash src="{splashscreen}"/>
+ 
+<platform name = "ios">
+  <splash src='splash/ios/Default.png' width='320' height='480' />
+  <splash src='splash/ios/Default@2x.png' width='640' height='960' />
+  <splash src='splash/ios/Default-568h@2x.png' width='640' height='1136' />
+  <splash src='splash/ios/Default-Portrait.png' width='768' height='1024' />
+  <splash src='splash/ios/Default-Landscape.png' width='1024' height='768' />
+  <splash src='splash/ios/Default-Portrait@2x.png' width='1536' height='2048' />
+  <splash src='splash/ios/Default-Landscape@2x.png' width='2048' height='1536' />
+</platform>
+ 
+<platform name="android">
+  <splash src="splash/android/426x320.png" density="land-ldpi" />
+  <splash src="splash/android/470x320.png" density="land-mdpi" />
+  <splash src="splash/android/640x480.png" density="land-hdpi" />
+  <splash src="splash/android/960x720.png" density="land-xhdpi" />
+ 
+  <splash src="splash/android/320x426.png" density="port-ldpi" />
+  <splash src="splash/android/320x470.png" density="port-mdpi" />
+  <splash src="splash/android/480x640.png" density="port-hdpi" />
+  <splash src="splash/android/720x960.png" density="port-xhdpi" />
+</platform>
+ 
+<icon src="{icon}" />
+<platform name="ios">
+  <icon src="icons/ios/icon.png" width="57" height="57" />
+  <icon src="icons/ios/icon-72.png" width="72" height="72" />
+  <icon src="icons/ios/icon_at_2x.png" width="114" height="114" />
+  <icon src="icons/ios/icon-72_at_2x.png" width="144" height="144" />
+</platform>
+ 
+<platform name="android">
+  <icon src="icons/android/ldpi.png" gap:density="ldpi" />
+  <icon src="icons/android/mdpi.png" gap:density="mdpi" />
+  <icon src="icons/android/hdpi.png" gap:density="hdpi" />
+  <icon src="icons/android/xhdpi.png" gap:density="xhdpi" />
+</platform>
+ 
+  <preference name="permissions" value="none"/>
+  <preference name="orientation" value="default"/>
+  <preference name="target-device" value="universal"/>
+  <preference name="fullscreen" value="false"/>
+  <preference name="webviewbounce" value="true"/>
+  <preference name="prerendered-icon" value="true"/>
+  <preference name="stay-in-webview" value="false"/>
+  <preference name="ios-statusbarstyle" value="black-opaque"/>
+  <preference name="detect-data-types" value="true"/>
+  <preference name="exit-on-suspend" value="true"/>
+  <preference name="show-splash-screen-spinner" value="true"/>
+  <preference name="auto-hide-splash-screen" value="true"/>
+  <preference name="disable-cursor" value="false"/>
+  <preference name="android-minSdkVersion" value="14"/>
+  <preference name="android-installLocation" value="auto"/>
+  <preference name="EnableViewportScale" value="true" />
+  <gap:plugin name="org.apache.cordova.device-orientation"/>
+  <gap:plugin name="org.apache.cordova.inappbrowser"/>
+  <gap:plugin name="org.apache.cordova.network-information"/>
+  <gap:plugin name="org.apache.cordova.splashscreen"/>
+  <gap:plugin name="org.apache.cordova.vibration"/>
+<!-- sample preference specifications -->
+<!-- <preference name="autorotate" value="false" readonly="true"/> -->
+<!-- <preference name="orientation" value="default" /> -->
+<!-- <preference name="fullscreen" value="true" /> -->
+ 
+<!-- Platforms: Customize as needed. -->
+<gap:platforms>
+   <gap:platform name="android" minVersion="2.3" />
+   <gap:platform name="ios" />
+   <gap:platform name="winphone" />
+</gap:platforms>
+</widget>
