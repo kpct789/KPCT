@@ -53,6 +53,8 @@
   <gap:splash src="www/res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi"/>
   <gap:splash src="www/res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="port-xhdpi"/>
   <!--<gap:splash src="www/res/screen/blackberry/screen-225.png" gap:platform="blackberry"/>-->
+    
+  <splash src="www/res/screen/ios/Default-568h@2x~iphone.png" platform="ios" width="320" height="480" />
   <gap:splash src="www/res/screen/ios/Default.png" gap:platform="ios" width="320" height="480"/>
   <gap:splash src="www/res/screen/ios/Default@2x.png" gap:platform="ios" width="640" height="960"/>
   <gap:splash src="www/res/screen/ios/Default-568h.png" gap:platform="ios" width="320" height="568"/>
@@ -60,6 +62,7 @@
   <gap:splash src="www/res/screen/ios/Default-Landscape-568h@2x.png" gap:platform="ios" width="1136" height="640"/>
   <gap:splash src="www/res/screen/ios/screen-ipad-portrait.png" gap:platform="ios" width="768" height="1024"/>
   <gap:splash src="www/res/screen/ios/screen-ipad-landscape.png" gap:platform="ios" width="1024" height="768"/>
+    
   <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
   <access origin="*"/>
   <plugin name="cordova-plugin-whitelist" version="1"/>
