@@ -26,6 +26,14 @@
             text-align: center;
             margin: auto;
         }
+        .fixed-bottom {
+            width: 100%;
+            bottom: 0px;
+            position: absolute;
+            margin: 0px;
+            height: 20px;
+            background-color: white;
+        }
     </style>
 </head>
 <body style="background-color: #D4EBF9;">    
@@ -53,7 +61,7 @@
     <div class="container" style="height: 85%; position: absolute; width: 100%;">
         <iframe id="response" style="width: 100%; height: 100%; position: relative; margin: 0; top: 0px; left: 0px;" frameborder="0" src="http://www.krishnapatnamport.com/ContainerSearch/m.index.php"></iframe>
     </div>
-    <div class="navbar navbar-fixed-bottom" style="height: 20px; padding-top: 5px;">
+    <div class="fixed-bottom">
         <a id="close" class="navbar-center" href="#" onclick="exitFromApp()"><img alt="close" src="img/Close24x24.PNG" height="20" width="20"></a>
     </div>
 </body>
