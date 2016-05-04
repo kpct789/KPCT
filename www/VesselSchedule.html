@@ -67,9 +67,7 @@
         if ($('#imageZoom').smartZoom('isPluginActive'))
             $('#imageZoom').smartZoom('destroy');
         else
-            $('#imageZoom').smartZoom({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%',
-                'easing': 'smartZoomEasing', 'pinchEnabled': true, 'containerBackground': '#FFFFFF'
-            });
+            $('#imageZoom').smartZoom({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'pinchEnabled': true });
     });
 
     document.addEventListener('DOMContentLoaded', loaded, false);
