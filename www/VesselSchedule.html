@@ -50,33 +50,31 @@
             </div>
         </div>
     </nav>
-    <div id="wrapper" style="width:100%">
+    <div id="wrapper">
         <div style="background-color: white; width: 99%; position: absolute; height: 98%;">
-            <img alt="Vessel Schedule" src="img/Vessel-Schedule.png" width="99%">
+            <img alt="Vessel Schedule" id="imageZoom" src="img/Vessel-Schedule.png">
         </div>
     </div>
     <div class="navbar-inverse navbar-fixed-bottom" style="height: 30px; padding-top: 5px;">
         <a class="navbar-center" href="#" onclick="exitFromApp()"><img src="img/Close24x24.PNG" height="20" width="20"></a>
     </div>
-    <script>
-        loaded();
-    </script>
 </body>
-<script type="application/javascript" src="js/iscroll.js"></script>
-<script type="application/javascript" src="cordova.js"></script>
-<script type="text/javascript">
-    var myScroll;
-        function loaded() {
-            myScroll = new iScroll('wrapper',
-                { zoom: true, zoomMax: 4 });
-        }
-
-        document.addEventListener('DOMContentLoaded', loaded, false);
-        //window.history.forward(-1);
-        function exitFromApp()
-        {
-            navigator.app.exitApp();
-        }
-</script>
-
 </html>
+<script type="text/javascript" src="js/smartzoomjquery.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        if ($('#imageZoom').smartZoom('isPluginActive'))
+            $('#imageZoom').smartZoom('destroy');
+        else
+            $('#imageZoom').smartZoom({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%',
+                'easing': 'smartZoomEasing', 'pinchEnabled': true, 'containerBackground': '#FFFFFF'
+            });
+    });
+
+    document.addEventListener('DOMContentLoaded', loaded, false);
+    //window.history.forward(-1);
+    function exitFromApp() {
+        navigator.app.exitApp();
+    }
+</script>
