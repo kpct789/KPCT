@@ -1,64 +1,62 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-    <title>Vessel Schedule</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="HandheldFriendly" content="true" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
-    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-    <style type="text/css">
-        .fill {
-            min-height: 100%;
-        }        
-        body {
-            padding-top: 60px;
-        }        
-        .navbar-center {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            text-align: center;
-            margin: auto;
-        }
-    </style>
-</head>
-<body>    
-    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.html" class="navbar-brand"><img src="img/logo.png" height="25"></a>
+    <head>
+        <title>Vessel Schedule</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
+        <meta name="HandheldFriendly" content="true" />
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
+        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+        <style type="text/css">
+            .fill {
+                min-height: 100%;
+            }        
+            body {
+                padding-top: 60px;
+            }        
+            .navbar-center {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                text-align: center;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>    
+        <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand"><img src="img/logo.png" height="25"></a>
+                </div>
+                <!-- Collection of nav links and other content for toggling -->
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="ContainerSearch.html"><img src="img/ContainerSearchButton_1.PNG" height="25" width="200"></a></li>
+                        <li class="active"><a href="VesselSchedule.html"><img src="img/VesselScheduleButton_1.PNG" height="25" width="200"></a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- Collection of nav links and other content for toggling -->
-            <div id="navbarCollapse" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="ContainerSearch.html"><img src="img/ContainerSearchButton_1.PNG" height="25" width="200"></a></li>
-                    <li class="active"><a href="VesselSchedule.html"><img src="img/VesselScheduleButton_1.PNG" height="25" width="200"></a></li>
-                </ul>
+        </nav>
+        <div id="wrapper" style="width:100%; top: 0px;">
+            <div style="background-color: white; width: 100%; position: absolute; height: 100%; top: 0px;">
+                <img alt="Vessel Schedule" id="imageZoom" src="img/Vessel-Schedule.png">
             </div>
         </div>
-    </nav>
-    <div id="wrapper" style="width:100%; top: 0px;">
-        <div style="background-color: white; width: 100%; position: absolute; height: 100%; top: 0px;">
-            <img alt="Vessel Schedule" id="imageZoom" src="img/Vessel-Schedule.png">
+        <div class="navbar navbar-fixed-bottom" style="height: 20px; padding-top: 5px;">
+            <a class="navbar-center" href="#" onclick="exitFromApp()"><img src="img/Close24x24.PNG" height="20" width="20"></a>
         </div>
-    </div>
-    <div class="navbar navbar-fixed-bottom" style="height: 20px; padding-top: 5px;">
-        <a class="navbar-center" href="#" onclick="exitFromApp()"><img src="img/Close24x24.PNG" height="20" width="20"></a>
-    </div>
-</body>
+    </body>
 </html>
 <script type="text/javascript" src="js/smartzoomjquery.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
@@ -69,7 +67,6 @@
         else
             $('#imageZoom').smartZoom({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'pinchEnabled': true });
     });
-
     document.addEventListener('DOMContentLoaded', loaded, false);
     //window.history.forward(-1);
     function exitFromApp() {
