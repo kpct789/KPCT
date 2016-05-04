@@ -54,18 +54,32 @@
             </div>
         </div>
         <div class="navbar navbar-fixed-bottom" style="height: 20px; padding-top: 5px;">
-            <a class="navbar-center" href="#" onclick="exitFromApp()"><img src="img/Close24x24.PNG" height="20" width="20"></a>
+            <a id="close" class="navbar-center" href="#" onclick="exitFromApp()"><img alt="close" src="img/Close24x24.PNG" height="20" width="20"></a>
         </div>
     </body>
 </html>
 <script type="text/javascript" src="js/smartzoomjquery.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript">
+    function isPhoneGap() {
+        return (window.cordova || window.PhoneGap || window.phonegap)
+                && /^file:\/{3}[^\/]/i.test(window.location.href)
+                && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
+    }
     $(document).ready(function () {
         if ($('#imageZoom').smartZoom('isPluginActive'))
             $('#imageZoom').smartZoom('destroy');
         else
             $('#imageZoom').smartZoom({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'pinchEnabled': true });
+
+        if (isPhoneGap()) {
+            $("#close").show();
+        } else {
+            $("#close").hide();
+        }
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            $("#close").hide();
+        }
     });
     document.addEventListener('DOMContentLoaded', loaded, false);
     //window.history.forward(-1);

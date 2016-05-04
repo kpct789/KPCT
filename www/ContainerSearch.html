@@ -53,16 +53,30 @@
     <div class="container" style="height: 85%; position: absolute; width: 100%;">
         <iframe id="response" style="width: 100%; height: 100%; position: relative; margin: 0; top: 0px; left: 0px;" frameborder="0" src="http://www.krishnapatnamport.com/ContainerSearch/m.index.php"></iframe>
     </div>
-    <div class="navbar-inverse navbar-fixed-bottom" style="height: 30px; padding-top: 5px;">
-        <a class="navbar-center" href="#" onclick="exitFromApp()"><img src="img/Close24x24.PNG" height="20" width="20"></a>
+    <div class="navbar navbar-fixed-bottom" style="height: 20px; padding-top: 5px;">
+        <a id="close" class="navbar-center" href="#" onclick="exitFromApp()"><img alt="close" src="img/Close24x24.PNG" height="20" width="20"></a>
     </div>
 </body>
-    <script type="application/javascript" src="cordova.js"></script>
-    <script type="text/javascript">
-        //window.history.forward(-1);
-        function exitFromApp()
-        {
-            navigator.app.exitApp();
-        }
-    </script>
 </html>
+<script type="application/javascript" src="cordova.js"></script>
+<script type="text/javascript">
+    //window.history.forward(-1);
+    function isPhoneGap() {
+        return (window.cordova || window.PhoneGap || window.phonegap)
+                    && /^file:\/{3}[^\/]/i.test(window.location.href)
+                    && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
+    }
+    function exitFromApp() {
+        navigator.app.exitApp();
+    }
+    $(document).ready(function () {
+        if (isPhoneGap()) {
+            $("#close").show();
+        } else {
+            $("#close").hide();
+        }
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            $("#close").hide();
+        }
+    });
+</script>
