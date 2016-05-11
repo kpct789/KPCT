@@ -14,6 +14,7 @@
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
         <script type="text/javascript" src="js/jquery1.11.1-min.js"></script>
         <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="jqwidgets/jqxcore.js"></script>
         <script type="text/javascript" src="jqwidgets/jqxdata.js"></script>
         <script type="text/javascript" src="jqwidgets/jqxbuttons.js"></script>
@@ -25,6 +26,14 @@
         <style type="text/css">
             body {
                 padding-top: 60px;
+            }
+            .fixed-bottom {
+                width: 100%;
+                bottom: 0px;
+                position: absolute;
+                margin: 0px;
+                height: 20px;
+                background-color: #D4EBF9;
             }
         </style>
     </head>
@@ -58,10 +67,29 @@
             <div id="jqxgrid">
             </div>
         </div>
+        <div class="fixed-bottom">
+            <a id="close" class="navbar-center" href="#" onclick="exitFromApp()"><img alt="close" src="img/Close24x24.PNG" height="20" width="20"></a>
+        </div>
     </body>
 </html>
 <script type="text/javascript">
+    function isPhoneGap() {
+        return (window.cordova || window.PhoneGap || window.phonegap)
+                    && /^file:\/{3}[^\/]/i.test(window.location.href)
+                    && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
+    }
+    function exitFromApp() {
+        navigator.app.exitApp();
+    }
     $(document).ready(function () {
+        if (isPhoneGap()) {
+            $("#close").show();
+        } else {
+            $("#close").hide();
+        }
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            $("#close").hide();
+        }
         $("#btnSearch").click(function () {
             if ($("#txtContainerNo").val() == null || $("#txtContainerNo").val() == "") {
                 alert("Please Enter Container No.");
