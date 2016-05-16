@@ -167,8 +167,8 @@
     <script type="text/javascript">
         function isPhoneGap() {
             return (window.cordova || window.PhoneGap || window.phonegap)
-                        && /^file:\/{3}[^\/]/i.test(window.location.href)
-                        && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
+                                      && /^file:\/{3}[^\/]/i.test(window.location.href)
+                                      && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
         }
         $(document).ready(function () {
             //window.history.forward(-1);
@@ -197,21 +197,11 @@
         }
         /*document.addEventListener("backbutton", onBackKeyDown, false);
         function onBackKeyDown() {
-        //window.location.href = "index.html";
         }*/
-        document.addEventListener("backbutton", function () {
-            navigator.notification.confirm(
-                      'Press back again to exit'
-                    , function (button) {
-                        if (button == 2 || button == 0) {
-                            navigator.app.exitApp();
-                        }
-                    }
-                    , 'Exit App?'
-                    , ['No way', 'Exit']
-                );
-            return false;
-        }, false);
+        document.addEventListener('backbutton', function (event) {
+            event.preventDefault(); // EDIT
+            navigator.app.exitApp(); // exit the app
+        });
     </script>
 </body>
 </html>
