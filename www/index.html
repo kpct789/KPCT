@@ -164,13 +164,13 @@
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript">
-        window.history.forward();
         function isPhoneGap() {
             return (window.cordova || window.PhoneGap || window.phonegap)
-                && /^file:\/{3}[^\/]/i.test(window.location.href)
-                && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
+                        && /^file:\/{3}[^\/]/i.test(window.location.href)
+                        && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
         }
         $(document).ready(function () {
+            //window.history.forward(-1);
             //var rurl='http://172.168.8.151:81/ContainerSearch';
             //var rurl='http://61.0.225.169:81/ContainerSearch';
             //var rurl = 'http://www.krishnapatnamport.com/ContainerSearch/m.index.php';
@@ -193,6 +193,10 @@
         });
         function exitFromApp() {
             navigator.app.exitApp();
+        }
+        document.addEventListener("backbutton", onBackKeyDown, false);
+        function onBackKeyDown() {
+            window.location.href = "index.html";
         }
     </script>
 </body>
