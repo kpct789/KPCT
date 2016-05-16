@@ -197,25 +197,20 @@
         }
         /*document.addEventListener("backbutton", onBackKeyDown, false);
         function onBackKeyDown() {
-            //window.location.href = "index.html";
+        //window.location.href = "index.html";
         }*/
-        document.addEventListener("backbutton", function() {
-            if ( $('.ui-page-active').attr('id') == 'home') {
-                navigator.notification.confirm(
+        document.addEventListener("backbutton", function () {
+            navigator.notification.confirm(
                       'Press back again to exit'
-                    , function(button) {
+                    , function (button) {
                         if (button == 2 || button == 0) {
                             navigator.app.exitApp();
                         }
-                      }
+                    }
                     , 'Exit App?'
                     , ['No way', 'Exit']
                 );
-                return false;
-
-            } else {
-                history.back();
-            }
+            return false;
         }, false);
     </script>
 </body>
