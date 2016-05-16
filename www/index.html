@@ -199,9 +199,13 @@
         function onBackKeyDown() {
         }*/
         var click = 0;
+        function ClearClick() {
+            click = 0;
+        }
         document.addEventListener('backbutton', function (event) {
             //event.preventDefault(); // EDIT
             click = parseInt(click) + 1;
+            setTimeout(ClearClick, 3000);
             if (parseInt(click) == 2)
                 navigator.app.exitApp(); // exit the app
         });
