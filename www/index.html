@@ -201,9 +201,8 @@
         var click = 0;
         document.addEventListener('backbutton', function (event) {
             //event.preventDefault(); // EDIT
-            if (parseInt(click) == 0)
-                click = parseInt(click) + 1;
-            if (parseInt(click) == 1)
+            click = parseInt(click) + 1;
+            if (parseInt(click) == 2)
                 navigator.app.exitApp(); // exit the app
         });
     </script>
