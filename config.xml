@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.kpcl.kpctcontainersearch" version="2.0.3">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.kpcl.kpctcontainersearch" version="2.1.0">
   <name>KPCT</name>
   <description>Krishnapatnam Port Container Terminal - Container Search Application</description>
-  <author href="http://www.krishnapatnamport.com" email="support@krishnapatnamport.com">KPCL IT Team</author>
+  <author href="http://www.krishnapatnamport.com" email="epms_support@krishnapatnamport.com">KPCL IT Team</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="portrait"/>
@@ -75,7 +75,6 @@
   <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios" width="640" height="1136" />
     
   <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
-    <gap:plugin name="cordova-plugin-x-toast" source="npm" />
   <access origin="*"/>
   <plugin name="cordova-plugin-whitelist" version="1"/>
   <allow-intent href="http://*/*"/>
@@ -92,14 +91,4 @@
     <allow-intent href="itms-apps:*"/>
   </platform>
   <platform name="winphone" />
-
-    <feature name="Toast">
-  <param name="ios-package" value="Toast" />
-</feature>
-    <feature name="Toast">
-  <param name="android-package" value="nl.xservices.plugins.Toast" />
-</feature>
-    <feature name="Toast">
-  <param name="wp-package" value="Toast"/>
-</feature>
 </widget>

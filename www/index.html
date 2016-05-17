@@ -168,7 +168,6 @@
         </div>
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/Toast.js"></script>
     <script type="text/javascript">
         function isPhoneGap() {
             return (window.cordova || window.PhoneGap || window.phonegap)
@@ -176,19 +175,6 @@
                                       && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
         }
         $(document).ready(function () {
-            window.plugins.toast.showShortTop('Hello there!', function (a) { console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b) });
-            //window.history.forward(-1);
-            //var rurl='http://172.168.8.151:81/ContainerSearch';
-            //var rurl='http://61.0.225.169:81/ContainerSearch';
-            //var rurl = 'http://www.krishnapatnamport.com/ContainerSearch/m.index.php';
-            //var redirect = function(){
-            //    $(location).attr('href',rurl);
-            //};
-            //var docWidth=document.documentElement.clientWidth;
-            //var docHeight=document.documentElement.clientHeight;
-
-            //$("#txtScreenCoords").val(docWidth+'x'+docHeight);
-            //setTimeout(redirect, 5000);
             if (isPhoneGap()) {
                 $("#close").show();
             } else {
