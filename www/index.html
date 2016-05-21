@@ -207,6 +207,11 @@
         document.addEventListener('backbutton', function (event) {
             //event.preventDefault(); // EDIT
             click = parseInt(click) + 1;
+            window.plugins.toast.showShortTop('Press again to exit', function (a) {
+                console.log('toast success: ' + a)
+            }, function (b) {
+                alert('toast error: ' + b)
+            });
             setTimeout(ClearClick, 3000);
             if (parseInt(click) == 2)
                 navigator.app.exitApp(); // exit the app
