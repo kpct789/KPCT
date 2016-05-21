@@ -175,12 +175,7 @@
                                       && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
         }
 
-        window.plugins.toast.showShortTop('Hello there!', function (a) {
-            console.log('toast success: ' + a)
-        },
-        function (b) {
-            alert('toast error: ' + b)
-        });
+
 
         $(document).ready(function () {
             if (isPhoneGap()) {
@@ -191,6 +186,13 @@
             if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
                 $("#close").hide();
             }
+
+            window.plugins.toast.showShortTop('Hello there!', function (a) {
+                console.log('toast success: ' + a)
+            },
+            function (b) {
+                alert('toast error: ' + b)
+            });
         });
         function exitFromApp() {
             navigator.app.exitApp();
