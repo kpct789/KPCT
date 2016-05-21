@@ -195,7 +195,7 @@
         document.addEventListener('backbutton', function (event) {
             click = parseInt(click) + 1;
             if (isPhoneGap() || /android/i.test(navigator.userAgent)) {
-                window.plugins.toast.showShortBottom('Press back again to exit');
+                window.plugins.toast.show('Press back again to exit', 'short', 'bottom');
             }
             setTimeout(ClearClick, 3000);
             if (parseInt(click) == 2)
