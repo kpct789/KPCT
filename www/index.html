@@ -157,7 +157,6 @@
             </table>
         </div>
         <br>
-    <button id="btnToast">Toast showShortTop</button>
         <div class="footerimg">&nbsp;
         </div>
         <div class="navbar-fixed-bottom text-center footer">
@@ -185,33 +184,19 @@
             if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
                 $("#close").hide();
             }
-
-            $("#btnToast").click(function () {
-                window.plugins.toast.showShortTop('Hello there!', function (a) {
-                    console.log('toast success: ' + a)
-                }, function (b) {
-                    alert('toast error: ' + b)
-                });
-            });
         });
         function exitFromApp() {
             navigator.app.exitApp();
         }
-        /*document.addEventListener("backbutton", onBackKeyDown, false);
-        function onBackKeyDown() {
-        }*/
         var click = 0;
         function ClearClick() {
             click = 0;
         }
         document.addEventListener('backbutton', function (event) {
-            //event.preventDefault(); // EDIT
             click = parseInt(click) + 1;
-            window.plugins.toast.showShortTop('Press again to exit', function (a) {
-                console.log('toast success: ' + a)
-            }, function (b) {
-                alert('toast error: ' + b)
-            });
+            if (isPhoneGap() || /android/i.test(navigator.userAgent)) {
+                window.plugins.toast.showShortBottom('Press back again to exit');
+            }
             setTimeout(ClearClick, 3000);
             if (parseInt(click) == 2)
                 navigator.app.exitApp(); // exit the app
