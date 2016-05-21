@@ -157,6 +157,7 @@
             </table>
         </div>
         <br>
+    <button onclick="window.plugins.toast.showShortTop('Hello there!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">Toast showShortTop</button>
         <div class="footerimg">&nbsp;
         </div>
         <div class="navbar-fixed-bottom text-center footer">
@@ -175,8 +176,6 @@
                                       && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
         }
 
-
-
         $(document).ready(function () {
             if (isPhoneGap()) {
                 $("#close").show();
@@ -186,13 +185,6 @@
             if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
                 $("#close").hide();
             }
-
-            toast.showShortTop('Hello there!', function (a) {
-                console.log('toast success: ' + a)
-            },
-            function (b) {
-                alert('toast error: ' + b)
-            });
         });
         function exitFromApp() {
             navigator.app.exitApp();
