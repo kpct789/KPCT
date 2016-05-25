@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.kpcl.kpctcontainersearch" version="2.1.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.kpcl.kpctcontainersearch" version="2.0.0">
   <name>KPCT</name>
   <description>Krishnapatnam Port Container Terminal - Container Search Application</description>
   <author href="http://www.krishnapatnamport.com" email="epms_support@krishnapatnamport.com">KPCL IT Team</author>
