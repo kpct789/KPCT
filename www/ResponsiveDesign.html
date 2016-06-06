@@ -3,26 +3,26 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/jquery1.11.1-min.js"></script>
         <script src="js/smartzoomjquery.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-                /*$('#imageFullScreen').smartZoom({ 'easing': 'smartZoomEasing', 'maxScale': 3,
-                'pinchEnabled': true, 'containerBackground': '#000'
-                });*/
-
-                if ($('#imageZoom').smartZoom('isPluginActive'))
-                    $('#imageZoom').smartZoom('destroy');
-                else
-                    $('#imageZoom').smartZoom({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%',
-                        'easing': 'smartZoomEasing', 'pinchEnabled': true, 'containerBackground': '#FFFFFF'
-                    });
+                readConfig();
             });
+            function readConfig() {
+                var xhr = new XMLHttpRequest();
+                xhr.addEventListener("load", function () {
+                    var parser = new DOMParser();
+                    var doc = parser.parseFromString(xhr.responseText, "application/xml");
+                    alert("Description : " +
+                          doc.getElementsByTagName("description").item(0).textContent);
+                });
+                xhr.open("get", "../config.xml", true);
+                xhr.send();
+            }
         </script>
     </head>
     <body>
-        <div id="imgContainer">
-            <img alt="Zoom" id="imageZoom" src="img/Vessel-Schedule.png"/>
-        </div>
+        
     </body>
 </html>
