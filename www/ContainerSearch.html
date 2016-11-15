@@ -1,68 +1,165 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-    <title>Container Search</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="HandheldFriendly" content="true" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
-    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-    <style type="text/css">
-        .fill {
-            min-height: 100%;
-        }
-        body{
-            padding-top: 65px;
-        }
-        .navbar-center {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            text-align: center;
-            margin: auto;
-        }
-    </style>
-</head>
-<body style="background-color: #D4EBF9;">    
-    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top" style="background-color: #D4EBF9;">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.html" class="navbar-brand"><img src="img/logo.png" height="25"></a>
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sample jQuery Grid</title>
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="HandheldFriendly" content="true" />
+        <link rel="stylesheet" type="text/css" href="jqwidgets/styles/jqx.base.css">
+        <link rel="stylesheet" type="text/css" href="jqwidgets/styles/jqx.glacier.css" />
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+        <script type="text/javascript" src="js/jquery1.11.1-min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="jqwidgets/jqxcore.js"></script>
+        <script type="text/javascript" src="jqwidgets/jqxdata.js"></script>
+        <script type="text/javascript" src="jqwidgets/jqxbuttons.js"></script>
+        <script type="text/javascript" src="jqwidgets/jqxscrollbar.js"></script>
+        <script type="text/javascript" src="jqwidgets/jqxmenu.js"></script>
+        <script type="text/javascript" src="jqwidgets/jqxgrid.js"></script>
+        <script type="text/javascript" src="jqwidgets/jqxgrid.selection.js"></script>
+        <script type="text/javascript" src="jqwidgets/jqxgrid.columnsresize.js"></script>
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+            }
+            .navbar-center {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                text-align: center;
+                margin: auto;
+            }
+            .fixed-bottom {
+                width: 100%;
+                bottom: 0px;
+                position: absolute;
+                margin: 0px;
+                height: 22px;
+                background-color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand"><img src="img/logo.png" height="25"></a>
+                </div>
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav" style="font-family: Roboto;">
+                        <li class="active"><a href="ContainerSearch.html">Container Search</a></li>
+                        <li><a href="VesselSchedule.html">Vessel Schedule</a></li>
+                        <li><a id="close" href="#" onclick="exitFromApp()">Exit</a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- Collection of nav links and other content for toggling -->
-            <div id="navbarCollapse" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="ContainerSearch.html"><img src="img/ContainerSearchButton_1.PNG" height="25" width="200"></a></li>
-                    <li><a href="VesselSchedule.html"><img src="img/VesselScheduleButton_1.PNG" height="25" width="200"></a></li>
-                </ul>
+        </nav>
+        <div class="container-fluid">
+            <!--<div class="page-header">
+                <h3>Container Search</h3>
+            </div>-->
+            <label for="txtContainerNo" class="control-label">Container No</label>
+            <input id="txtContainerNo" type="text" class="form-control input-sm text-uppercase" placeholder="Enter Container No">
+            <button id="btnSearch" class="btn btn-sm btn-block" style="background-color: #07679A; color: #fff">Search</button><br>
+            <div id="jqxgrid">
             </div>
         </div>
-    </nav>
-    <div class="container" style="height: 85%; position: absolute; width: 100%;">
-        <iframe id="response" style="width: 100%; height: 100%; position: relative; margin: 0; top: 0px; left: 0px;" frameborder="0" src="http://www.krishnapatnamport.com/ContainerSearch/m.index.php"></iframe>
-    </div>
-    <div class="navbar-inverse navbar-fixed-bottom" style="height: 30px; padding-top: 5px;">
-        <a class="navbar-center" href="#" onclick="exitFromApp()"><img src="img/Close24x24.PNG" height="20" width="20"></a>
-    </div>
-</body>
-    <script type="application/javascript" src="cordova.js"></script>
-    <script type="text/javascript">
-        //window.history.forward(-1);
-        function exitFromApp()
-        {
-            navigator.app.exitApp();
-        }
-    </script>
+    </body>
 </html>
+<script type="text/javascript">
+    function isPhoneGap() {
+        return (window.cordova || window.PhoneGap || window.phonegap)
+                    && /^file:\/{3}[^\/]/i.test(window.location.href)
+                    && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
+    }
+    function exitFromApp() {
+        navigator.app.exitApp();
+    }
+    $(document).ready(function () {
+        if (isPhoneGap()) {
+            $("#close").show();
+        } else {
+            $("#close").hide();
+        }
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            $("#close").hide();
+        }
+        $("#btnSearch").click(function () {
+            if ($("#txtContainerNo").val() == null || $("#txtContainerNo").val() == "") {
+                alert("Please Enter Container No.");
+                $("#txtContainerNo").focus();
+                $("#jqxgrid").empty();
+                return false;
+            }
+            var source =
+            {
+                datatype: "json",
+                datafields: [
+                    { name: 'ContainerNo', type: 'string' },
+                    { name: 'ISOCode', type: 'string' },
+                    { name: 'LineCode', type: 'string' },
+                    { name: 'Category', type: 'string' },
+                    { name: 'FreightKind', type: 'string' },
+                    { name: 'Weight', type: 'string' },
+                    { name: 'Status', type: 'string' },
+                    { name: 'TimeIn', type: 'string' },
+                    { name: 'TimeOut', type: 'string' },
+                    { name: 'IBCarrier', type: 'string' },
+                    { name: 'OBCarrier', type: 'string' }
+                ],
+                url: "http://61.0.225.169/ContainerSearchAPI/api/GetContainerData/" + $("#txtContainerNo").val()
+            };
+
+            var dataAdapter = new $.jqx.dataAdapter(source,
+            {
+                formatData: function (data) {
+                    $.extend(data, {
+                        featureClass: "P",
+                        style: "full",
+                        maxRows: 50
+                    });
+                    return data;
+                }
+            });
+
+            $("#jqxgrid").jqxGrid(
+            {
+                source: dataAdapter,
+                columnsresize: true,
+                theme: 'energyblue',
+                columns: [
+                    { text: 'ContainerNo', datafield: 'ContainerNo', width: 120 },
+                    { text: 'ISOCode', datafield: 'ISOCode', width: 40 },
+                    { text: 'LineCode', datafield: 'LineCode', width: 40 },
+                    { text: 'Category', datafield: 'Category', width: 70 },
+                    { text: 'FreightKind', datafield: 'FreightKind', width: 100 },
+                    { text: 'Weight', datafield: 'Weight', width: 80, cellsalign: 'right' },
+                    { text: 'Status', datafield: 'Status', width: 70 },
+                    { text: 'TimeIn', datafield: 'TimeIn', width: 120 },
+                    { text: 'TimeOut', datafield: 'TimeOut', width: 120 },
+                    { text: 'IBCarrier', datafield: 'IBCarrier', width: 150 },
+                    { text: 'OBCarrier', datafield: 'OBCarrier', width: 150 }
+                ],
+                width: parseFloat(document.documentElement.clientWidth) - 20,
+                height: parseFloat(document.documentElement.clientHeight) - 200
+            });
+        });
+    });
+    $(window).resize(function () {
+        $("#jqxgrid").jqxGrid({
+            width: parseFloat(document.documentElement.clientWidth) - 20,
+            height: parseFloat(document.documentElement.clientHeight) - 180
+        });
+    });
+</script>

@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html>
-    
+<html lang="en">
     <head>
-        <title>jQM Complex Demo</title>
-        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi" />
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-    </head>
-    
-    <body>
-        <div data-role="page" id="index">
-            <div data-theme="a" data-role="header">
-                 <h3>First Page</h3>
-                 <a href="#second" class="ui-btn-right">Next</a>
-            </div>
-            <div data-role="content"><a data-role="button" id="check-connection">Check internet connection</a></div>
-            <div data-theme="a" data-role="footer" data-position="fixed"></div>
-        </div>
-    </body>
-    <script type="text/javascript">
-        var connectionStatus = false;
-
-        $(document).on('pagebeforeshow', '#index', function () {
-            setInterval(function () {
-                connectionStatus = navigator.onLine ? 'online' : 'offline';
-            }, 100);
-            $(document).on('click', '#check-connection', function () {
-                alert(connectionStatus);
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <script src="js/jquery1.11.1-min.js"></script>
+        <script src="js/smartzoomjquery.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                readConfig();
             });
-        });
-    </script>
+            function readConfig() {
+                var xhr = new XMLHttpRequest();
+                xhr.addEventListener("load", function () {
+                    var parser = new DOMParser();
+                    var doc = parser.parseFromString(xhr.responseText, "application/xml");
+                    alert("Description : " +
+                          doc.getElementsByTagName("description").item(0).textContent);
+                });
+                xhr.open("get", "../config.xml", true);
+                xhr.send();
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
 </html>
